@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "~> 3.1"
+ruby "~> 3.2.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
@@ -31,6 +31,18 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
+
+# An OmniAuth strategy to log in with Auth0.
+gem 'omniauth-auth0', '~> 3.0'
+
+# Prevents forged authentication requests
+gem 'omniauth-rails_csrf_protection', '~> 1.0'
+
+# Gem Repost implements Redirect using POST method. https://vergilet.github.io/repost/
+gem 'repost'
+
+# A ruby implementation of the RFC 7519 OAuth JSON Web Token (JWT) standard. https://github.com/jwt/ruby-jwt
+gem 'jwt'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

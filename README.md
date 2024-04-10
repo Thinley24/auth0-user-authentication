@@ -41,3 +41,4 @@ Run the project:
 ```bash
 bin/rails
 ```
+# auth0-user-authentication
